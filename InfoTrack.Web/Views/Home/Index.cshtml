@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>SEO Analyzer</h2>
+
+<div>
+    Keywords:
+    <input type="text" data-bind="value: keywords" />
+</div>
+<div>
+    Please enter a url:
+    <input type="url" data-bind="value: url" />
+</div>
+
+
+<button class="btn btn-primary" data-bind="click: clickHandler">GO</button>
+
+<div>
+    <h3>Results</h3>
+    <span data-bind="text: results"></span>
+</div>
+
+
+<script src="~/Scripts/home.js"></script>
+
+
+
+
+
