@@ -5,32 +5,61 @@
 
 <h2>SEO Analyzer</h2>
 
-<div>
-    Keywords:
-    <input type="text" data-bind="value: keywords" />
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <label>Keywords</label>
+        </div>
+        <div class="col">
+            <input class="form-control" type="text" data-bind="value: keywords" />
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col">
+            <label>URL</label>
+        </div>
+        <div class="col">
+            <input class="form-control" type="url" data-bind="value: url" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button class="btn-primary" data-bind="click: clickHandler">
+                GO
+            </button></div>
+    </div>
 </div>
-<div>
-    Please enter a url:
-    <input type="url" data-bind="value: url" />
-</div>
 
 
-<button class="btn btn-primary" data-bind="click: clickHandler">GO</button>
 
 <div>
-    <h3>Results</h3>
-    <table>
-        <thead>
-            <tr><th>Rank</th><th>url</th></tr>
-        </thead>
-        <tbody data-bind="foreach: results">
-            <tr>
-                <td data-bind="text: Rank"></td>
-                <td data-bind="text: Url"></td>
-            </tr>
-        </tbody>
-    </table>
-    @*<span data-bind="text: results"></span>*@
+    <div data-bind="visible: isError">
+        <span class="label label-danger" >Error retrieving results</span>
+    </div>
+    
+    <div data-bind="class: loader"></div>
+    <div data-bind="visible: haveResults">
+        <h3>Results</h3>
+        Your URL appears in these positions:
+        <span class="label label-primary" data-bind="text: resultsSummary"></span>
+
+
+
+        <table class="table">
+            <thead>
+                <tr><th>Rank</th><th>URL</th></tr>
+            </thead>
+            <tbody data-bind="foreach: results">
+                <tr data-bind="class: MatchClass">
+                    <td data-bind="text: Rank"></td>
+                    <td data-bind="text: Url"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
 </div>
 
 

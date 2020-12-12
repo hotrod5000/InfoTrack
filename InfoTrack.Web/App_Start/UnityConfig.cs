@@ -14,8 +14,8 @@ namespace InfoTrack.Web
         {
 			var container = new UnityContainer();
 
-            //container.RegisterType<IResultsFetcher, ResultsFetcher>(new InjectionConstructor(@"https://www.google.com.au/search?num=100&q="));
-            container.RegisterType<IResultsFetcher, MockResultsFetcher>();
+            container.RegisterType<IResultsFetcher, ResultsFetcher>(new InjectionConstructor(@"https://www.google.com.au/search?num=100&q="));
+            //container.RegisterType<IResultsFetcher, MockResultsFetcher>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

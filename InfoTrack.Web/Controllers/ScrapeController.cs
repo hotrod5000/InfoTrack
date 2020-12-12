@@ -1,6 +1,7 @@
 ﻿using InfoTrack.Contracts;
 using InfoTrack.Core;
 using InfoTrack.Web.Models;
+using System;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -19,13 +20,22 @@ namespace InfoTrack.Web.Controllers
             var searchResult = _resultsFetcher.Fetch(term);
             var scraper = new ResultsScraper(searchResult);
             var scraped = scraper.GetSearchResults();
-            return Json(scraped
+
+            var list = scraped
                 .AsEnumerable()
-                .Select((item, index) => new ResultsViewModel() 
-                                            {
-                                                Rank = index,
-                                                Url = item,
-                                                Match = index % 2 == 0}), JsonRequestBehavior.AllowGet);
+                .Select((item, index) => new ResultViewModel()
+                {
+                    Rank = index + 1,
+                    Url = item,
+                    Match = item.Contains(url),
+                    MatchClass = item.Contains(url) ? "success" : "primary"
+                });
+            var viewModel = new ResultsListViewModel()
+            {
+                Summary = list.Count(x => x.Match) == 0 ? "none" : string.Join(",", list.Where(x => x.Match).Select(x => x.Rank)),
+                Results = list
+            };
+            return Json(viewModel, JsonRequestBehavior.AllowGet);
             
         }
         
