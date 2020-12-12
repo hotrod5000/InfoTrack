@@ -1,9 +1,9 @@
 ﻿
 function ViewModel() {
     var self = this;
-    self.keywords = "title tile";
+    self.keywords = "online title search";
     self.url = "ever";
-    self.results = ko.observable("fred");
+    self.results = ko.observableArray();
     self.clickHandler = function () {
         let searchWords = self.keywords.split(' ');
         let apiEndpoint = '/Scrape/GetSearchResults?url=' + self.url;

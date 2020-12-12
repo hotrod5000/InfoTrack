@@ -57,18 +57,14 @@ namespace InfoTrack.CoreTests
             //act
             var searchResults = sut.GetSearchResults();
 
-            File.WriteAllLines(".\\myoutput.txt", searchResults.ToArray());
-
-
             //assert
 
-            Assert.IsTrue(searchResults.Count == 2 &&
-                searchResults.ToArray()[0] == "https://services.dps.ohio.gov/bmvonlineservices/search/title&amp;sa=U&amp;ved=2ahUKEwjLkeKe4sPtAhXxHjQIHcDvC_UQFjAAegQIARAB&amp;usg=AOvVaw3SAs6QWAvnQCDb7iIHhd3j" &&
-                searchResults.ToArray()[1] == "https://www.propertyshark.com/info/property-title-search/&amp;sa=U&amp;ved=2ahUKEwjLkeKe4sPtAhXxHjQIHcDvC_UQFjAJegQIABAB&amp;usg=AOvVaw3c9T8ONX_VhdgvLZCZE5Ju");
+            Assert.IsTrue(searchResults.Count == 100);
 
 
 
 
         }
+
     }
 }
