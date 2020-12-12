@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 
-namespace InfoTrack.Core
+namespace InfoTrack.Core.ResultsScapers
 {
     public class ResultsScraper
     {
@@ -63,31 +63,7 @@ namespace InfoTrack.Core
             return ret;
         }
 
-        public int GetResultsCount()
-        {
-            var key = "a href=\"/url?q=";
 
-            return CountStringOccurrences(key);
-
-            //var regex = new Regex(@"<a\b[^>]*>(.*?)</a>");
-
-            //return regex.Matches(_input).Count;
-
-
-        }
-
-        public int CountStringOccurrences(string pattern)
-        {
-            // Loop through all instances of the string 'text'.
-            int count = 0;
-            int i = 0;
-            while ((i = _input.IndexOf(pattern, i)) != -1)
-            {
-                i += pattern.Length;
-                count++;
-            }
-            return count;
-        }
 
 
     }

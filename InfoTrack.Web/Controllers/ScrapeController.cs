@@ -1,7 +1,6 @@
 ﻿using InfoTrack.Contracts;
-using InfoTrack.Core;
+using InfoTrack.Core.ResultsScapers;
 using InfoTrack.Web.Models;
-using System;
 using System.Linq;
 using System.Web.Mvc;
 

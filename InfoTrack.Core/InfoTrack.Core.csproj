@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="ResultsFetchers\MockResultsFetcher.cs" />
     <Compile Include="ResultsFetchers\ResultsFetcher.cs" />
-    <Compile Include="ResultsScraper.cs" />
+    <Compile Include="ResultsScrapers\ResultsScraper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
