@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTrack.CoreTests", "Info
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTrack.Web", "InfoTrack.Web\InfoTrack.Web.csproj", "{BC2A04EB-F27C-4E07-A422-9A6E7C49C935}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTrack.Contracts", "InfoTrack.Contracts\InfoTrack.Contracts.csproj", "{72C230CA-C048-40F6-ACAD-C3167660032F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{BC2A04EB-F27C-4E07-A422-9A6E7C49C935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC2A04EB-F27C-4E07-A422-9A6E7C49C935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC2A04EB-F27C-4E07-A422-9A6E7C49C935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72C230CA-C048-40F6-ACAD-C3167660032F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72C230CA-C048-40F6-ACAD-C3167660032F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72C230CA-C048-40F6-ACAD-C3167660032F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72C230CA-C048-40F6-ACAD-C3167660032F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

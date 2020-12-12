@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InfoTrack.Contracts;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,9 +7,9 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfoTrack.Core
+namespace InfoTrack.Core.ResultsFetchers
 {
-    public class ResultsFetcher
+    public class ResultsFetcher : IResultsFetcher
     {
         string _baseUrl;
         public ResultsFetcher(string baseUrl)
@@ -23,3 +24,5 @@ namespace InfoTrack.Core
         }
     }
 }
+
+        

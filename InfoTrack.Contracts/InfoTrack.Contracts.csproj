@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E1BB7C50-08DD-4D69-A4F6-B2813B2D58BF}</ProjectGuid>
+    <ProjectGuid>{72C230CA-C048-40F6-ACAD-C3167660032F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InfoTrack.Core</RootNamespace>
-    <AssemblyName>InfoTrack.Core</AssemblyName>
+    <RootNamespace>InfoTrack.Contracts</RootNamespace>
+    <AssemblyName>InfoTrack.Contracts</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,16 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ResultsFetchers\MockResultsFetcher.cs" />
-    <Compile Include="ResultsFetchers\ResultsFetcher.cs" />
-    <Compile Include="ResultsScraper.cs" />
+    <Compile Include="IResultsFetcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\InfoTrack.Contracts\InfoTrack.Contracts.csproj">
-      <Project>{72c230ca-c048-40f6-acad-c3167660032f}</Project>
-      <Name>InfoTrack.Contracts</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
