@@ -1,8 +1,8 @@
 ﻿
 function ViewModel() {
     var self = this;
-    self.keywords = "online title search";
-    self.url = "ustitlerecords";
+    self.keywords = "";
+    self.url = "";
     self.results = ko.observableArray();
     self.resultsSummary = ko.observable();
     self.haveResults = ko.observable(false);
