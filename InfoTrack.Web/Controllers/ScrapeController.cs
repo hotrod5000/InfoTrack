@@ -26,8 +26,8 @@ namespace InfoTrack.Web.Controllers
                 {
                     Rank = index + 1,
                     Url = item,
-                    Match = item.Contains(url),
-                    MatchClass = item.Contains(url) ? "success" : "primary"
+                    Match = !string.IsNullOrWhiteSpace(url) && item.Contains(url),
+                    MatchClass = !string.IsNullOrWhiteSpace(url) && item.Contains(url) ? "success" : "primary"
                 });
             var viewModel = new ResultsListViewModel()
             {

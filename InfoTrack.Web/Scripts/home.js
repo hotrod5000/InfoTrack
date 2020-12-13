@@ -1,7 +1,7 @@
 ﻿
 function ViewModel() {
     var self = this;
-    self.keywords = "";
+    self.keywords = ko.observable();
     self.url = "";
     self.results = ko.observableArray();
     self.resultsSummary = ko.observable();
@@ -9,7 +9,7 @@ function ViewModel() {
     self.loader = ko.observable();
     self.isError = ko.observable(false);
     self.clickHandler = function () {
-        let searchWords = self.keywords.split(' ');
+        let searchWords = self.keywords().split(' ');
         let apiEndpoint = '/Scrape/GetSearchResults?url=' + self.url;
         for (var i = 0; i < searchWords.length; i++) {
             apiEndpoint += '&term=' + searchWords[i];

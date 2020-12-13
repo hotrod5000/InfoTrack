@@ -13,7 +13,7 @@ namespace InfoTrack.CoreTests
 
         [TestMethod]
         [DeploymentItem(@"TestInputs\\input_2results.txt")]
-        public void CanGetSearchResults()
+        public void CanGetSearchResults_2Results()
         {
 
             //arrange
@@ -35,7 +35,7 @@ namespace InfoTrack.CoreTests
 
         [TestMethod]
         [DeploymentItem(@"TestInputs\\input_100results.txt")]
-        public void CanGetSearchResults2()
+        public void CanGetSearchResults_100Results()
         {
 
             //arrange
